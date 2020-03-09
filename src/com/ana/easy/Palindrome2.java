@@ -15,9 +15,13 @@ public class Palindrome2 {
 		System.out.println("Entered palindrome string : " + palinStr);
 		boolean isPalindrome = true;
 		// compare first and last characters of string till we reach center
-		for (int i = 0; i <= (palinStr.length() - 1) / 2; i++) {	
-			if (palinStr.charAt(i) != palinStr.charAt(palinStr.length() - 1 - i))
+		for (int i = 0; i <= (palinStr.length() - 1) / 2; i++) {
+			System.out.println(i); //check whether "break" is happening appropriately 
+			if (palinStr.charAt(i) != palinStr.charAt(palinStr.length() - 1 - i)) {
 				isPalindrome = false;
+				break;
+			}
+				
 		}
 		displayPalindromeOrNot(isPalindrome);
 	}
